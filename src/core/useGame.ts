@@ -172,8 +172,8 @@ export function useGame(config: GameConfig): Game {
           index: i,
           row,
           column,
-          top: height + (size * row - (size / 2) * index),
-          left: width + (size * column - (size / 2) * index),
+          top: Math.abs(height + (size * row - (size / 2) * index)),
+          left: Math.abs(width + (size * column - (size / 2) * index)),
           parents: [],
           state: 0,
         }

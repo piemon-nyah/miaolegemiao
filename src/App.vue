@@ -162,8 +162,8 @@ function autoPlayMusic() {
 
 
 onMounted(() => {
-  initData()
   autoPlayMusic();
+  initData()
 })
 </script>
 
@@ -177,9 +177,9 @@ onMounted(() => {
         <template v-for="item in nodes" :key="item.id">
           <transition name="slide-fade">
             <Card
-              v-if="[0, 1].includes(item.state)"
-              :node="item"
-              @click-card="handleSelect"
+                    v-if="[0, 1].includes(item.state)"
+                    :node="item"
+                    @click-card="handleSelect"
             />
           </transition>
         </template>
@@ -190,17 +190,17 @@ onMounted(() => {
         </div>
       </transition>
       <!--<transition name="bounce">-->
-        <!--<div v-if="showTip" color="#000" flex items-center justify-center w-full text-28px fw-bold>-->
-          <!--第{{ curLevel + 1 }}关-->
-        <!--</div>-->
+      <!--<div v-if="showTip" color="#000" flex items-center justify-center w-full text-28px fw-bold>-->
+      <!--第{{ curLevel + 1 }}关-->
+      <!--</div>-->
       <!--</transition>-->
     </div>
 
     <div text-center h-58px flex items-center justify-center>
       <Card
-        v-for="item in removeList" :key="item.id" :node="item"
-        is-dock
-        @click-card="handleSelectRemove"
+              v-for="item in removeList" :key="item.id" :node="item"
+              is-dock
+              @click-card="handleSelectRemove"
       />
     </div>
     <div w-full flex items-center justify-center>
@@ -208,9 +208,9 @@ onMounted(() => {
         <template v-for="item in selectedNodes" :key="item.id">
           <transition name="bounce">
             <Card
-              v-if="item.state === 2"
-              :node="item"
-              is-dock
+                    v-if="item.state === 2"
+                    :node="item"
+                    is-dock
             />
           </transition>
         </template>
@@ -226,57 +226,62 @@ onMounted(() => {
       </button>
     </div>
     <!--<div w-full color="#000" fw-600 text-center pb-10px>-->
-      <!--<span mr-20px>designer: Teacher Face</span>-->
-      <!--by: Xc-->
-      <!--<a-->
-        <!--class="icon-btn"-->
-        <!--color="#000"-->
-        <!--i-carbon-logo-github-->
-        <!--rel="noreferrer"-->
-        <!--href="https://github.com/chenxch"-->
-        <!--target="_blank"-->
-        <!--title="GitHub"-->
-      <!--/>-->
-      <!--<span-->
-        <!--text-12px-->
-        <!--color="#00000018"-->
-      <!--&gt;-->
-        <!--<span-->
-          <!--class="icon-btn"-->
-          <!--text-2-->
-          <!--i-carbon:arrow-up-left-->
-        <!--/>-->
-        <!--star buff</span>-->
+    <!--<span mr-20px>designer: Teacher Face</span>-->
+    <!--by: Xc-->
+    <!--<a-->
+    <!--class="icon-btn"-->
+    <!--color="#000"-->
+    <!--i-carbon-logo-github-->
+    <!--rel="noreferrer"-->
+    <!--href="https://github.com/chenxch"-->
+    <!--target="_blank"-->
+    <!--title="GitHub"-->
+    <!--/>-->
+    <!--<span-->
+    <!--text-12px-->
+    <!--color="#00000018"-->
+    <!--&gt;-->
+    <!--<span-->
+    <!--class="icon-btn"-->
+    <!--text-2-->
+    <!--i-carbon:arrow-up-left-->
+    <!--/>-->
+    <!--star buff</span>-->
     <!--</div>-->
     <audio
-      ref="clickAudioRef"
-      style="display: none;"
-      controls
-      src="./audio/click.mp3"
+            ref="clickAudioRef"
+            style="display: none;"
+            controls
+            preload="auto"
+            src="./audio/click.mp3"
     />
     <audio
-      ref="dropAudioRef"
-      style="display: none;"
-      controls
-      src="./audio/drop.mp3"
+            ref="dropAudioRef"
+            style="display: none;"
+            controls
+            preload="auto"
+            src="./audio/drop.mp3"
     />
     <audio
-      ref="winAudioRef"
-      style="display: none;"
-      controls
-      src="./audio/win.mp3"
+            ref="winAudioRef"
+            style="display: none;"
+            controls
+            preload="auto"
+            src="./audio/win.mp3"
     />
     <audio
-      ref="loseAudioRef"
-      style="display: none;"
-      controls
-      src="./audio/lose.mp3"
+            ref="loseAudioRef"
+            style="display: none;"
+            controls
+            preload="auto"
+            src="./audio/lose.mp3"
     />
     <audio
-      ref="welAudioRef"
-      style="display: none;"
-      controls
-      src="./audio/welcome.mp3"
+            ref="welAudioRef"
+            style="display: none;"
+            controls
+            preload="auto"
+            src="./audio/welcome.mp3"
     />
     <audio
             id="bgmAudio"
